@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ChatGPT 中文版：国内最新使用指南（支持 GPT-4、4o 和 o1，无需翻墙）【2025/1/3 更新】</title>
+    <title>ChatGPT 中文版：国内最新使用指南（支持 GPT-4、4o 和 o1，无需翻墙）【2025/1/6 更新】</title>
     <meta name="description" content="ChatGPT 中文版是由 OpenAI 开发的 ChatGPT 模型的中文优化版本，专为中文用户提供流畅且精准的对话体验。全面整理 ChatGPT 中文版 的国内使用方式，为用户提供无需翻墙的镜像网站推荐。本指南致力于为用户提供全面的 ChatGPT 中文版使用指南，整合了国内可用的 ChatGPT镜像网站 和 官网使用教程，帮助您快速掌握 ChatGPT，无论是个人使用还是专业应用，均可无限使用 ChatGPT-4、GPT-4o 和 o1-preview！">
     <meta name="keywords" content="ChatGPT中文版,ChatGPT官网,ChatGPT中文网,ChatGPT中文版免费,ChatGPT免费,ChatGPT中文站,ChatGPT中文网站,chatgpt中文镜像,ChatGPT国内版,ChatGPT中国站,ChatGPT,人工智能,ChatGPT中文网官网,ChatGPT镜像">
     <meta property="og:title" content="ChatGPT 中文版：国内最新使用指南（支持 GPT-4、4o 和 o1，无需翻墙）">
@@ -42,16 +42,11 @@
             max-width: 800px;
         }
         h1 {
-            font-size: 3rem;
+            font-size: 48px;
             margin-bottom: 20px;
-            background: -webkit-linear-gradient(45deg, #ff4d4d, #f9cb28);
+            background: -webkit-linear-gradient(45deg, var(--color-1), var(--color-2));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
         }
         p {
             font-size: 24px;
@@ -61,18 +56,17 @@
         .button {
             display: inline-block;
             padding: 15px 30px;
-            background-color: #50e3c2;
-            color: #fff;
+            background-color: #007bff;
+            color: white;
             text-decoration: none;
-            border-radius: 10px;
-            font-size: 1.2rem;
+            border-radius: 50px;
+            font-size: 24px;
             font-weight: bold;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: all 0.3s ease;
         }
         .button:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
         }
         .background {
             position: fixed;
@@ -80,15 +74,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #4a90e2, #50e3c2);
+            background: linear-gradient(45deg, var(--color-1), var(--color-2));
             z-index: -1;
-            animation: gradientShift 10s infinite alternate ease-in-out;
+            opacity: 0.8;
         }
-        @keyframes gradientShift {
-            0% { background: linear-gradient(135deg, #4a90e2, #50e3c2); }
-            100% { background: linear-gradient(135deg, #ff4d4d, #f9cb28); }
-        }
-
         .arrow-down {
             position: absolute;
             bottom: 20px;
@@ -175,56 +164,12 @@
                 white-space: nowrap;
             }
             .arrow-down {
-                position: absolute;
-                bottom: 30px;
-                cursor: pointer;
-                font-size: 2rem;
-                color: #50e3c2;
-                animation: bounce 2s infinite;
-                text-shadow: 0px 0px 10px rgba(80, 227, 194, 0.8);
-            }
-            @keyframes bounce {
-                0%, 100% { transform: translateY(0); }
-                50% { transform: translateY(-10px); }
+                display: none;
             }
         }
     </style>
 </head>
 <body>
-    <div id="preloader">
-    <div class="loader"></div>
-</div>
-<style>
-    #preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #1a1a1a;
-        z-index: 1000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .loader {
-        border: 5px solid #333;
-        border-top: 5px solid #50e3c2;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-</style>
-<script>
-    window.addEventListener("load", function() {
-        document.getElementById("preloader").style.display = "none";
-    });
-</script>
     <div class="background"></div>
     <div class="container">
         <div class="content">
@@ -378,15 +323,17 @@
     </section>
 
     <script>
-        const gradients = [
-            ['#4a90e2', '#50e3c2'],
-            ['#ff4d4d', '#f9cb28'],
-            ['#7928ca', '#4c88e8']
+        const colors = [
+            ['#ff0080', '#7928ca'], 
+            ['#ff4d4d', '#f9cb28'], 
+            ['#7928ca', '#4c88e8'], 
+            ['#4c88e8', '#4FE2B1'], 
+            ['#ff0080', '#ff7f00']  
         ];
-        const gradient = gradients[Math.floor(Math.random() * gradients.length)];
-        document.documentElement.style.setProperty('--color-1', gradient[0]);
-        document.documentElement.style.setProperty('--color-2', gradient[1]);
-
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        const [color1, color2] = colors[randomIndex];
+        document.documentElement.style.setProperty('--color-1', color1);
+        document.documentElement.style.setProperty('--color-2', color2);
 
         function scrollToContent() {
             document.getElementById('more-content').scrollIntoView({ behavior: 'smooth' });
